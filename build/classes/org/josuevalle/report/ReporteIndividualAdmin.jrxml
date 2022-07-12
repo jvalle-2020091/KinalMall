@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteIndividualAdmin" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="402d20c2-1da9-4bb1-91eb-203875b69129">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="869"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" forecolor="#FF6600" uuid="653520ea-b8f4-46ad-a1fc-1bbc88b19835"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Documents\\NetBeansProjects\\KinalMall2020091\\src\\org\\josuevalle\\images\\membrete.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="0" y="14" width="88" height="637" forecolor="#FF6633" backcolor="#EA562B" uuid="345f96df-cab2-4b12-913e-859fb636df57"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement x="253" y="67" width="225" height="35" uuid="d527c2ff-0816-46bd-ae1a-d3397a86878b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="24" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Administración]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="29" y="19" width="128" height="111" uuid="891f1a3f-9b87-44b5-837c-82bdf219610f"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Documents\\NetBeansProjects\\KinalMall2020091\\src\\org\\josuevalle\\images\\logoKinal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="130" y="32" width="96" height="35" uuid="4cdc3719-1193-4dc9-9493-46627419b458"/>
+				<textElement textAlignment="Center">
+					<font fontName="Franklin Gothic Heavy" size="24" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Kinal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="56" width="84" height="35" uuid="60ab2d65-a23a-4425-bbde-c538c3f552fa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Franklin Gothic Heavy" size="24" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Mall]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="118" y="0" width="444" height="22" backcolor="#AF7A02" uuid="3e967128-66a1-42ce-8add-2abed90e127b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="145" y="2" width="150" height="20" uuid="bf39c8af-f605-499d-801a-27febc173751"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="2" width="121" height="20" uuid="c2b7563a-7198-498d-ae5d-fc863a01b39a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="2" width="100" height="20" uuid="4abf5cd0-4290-486c-888c-18463b9d0d00"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="145" y="0" width="150" height="20" uuid="e4f4fa25-b99c-46f4-a0b4-8a1338c97075"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="3" width="121" height="20" uuid="397d6df1-55ab-458c-925c-44f709a1a858"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="0" width="100" height="20" uuid="2e80fc17-90f9-4941-9d64-51782948ca4b"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="118" y="20" width="444" height="3" uuid="c47b674d-6303-46e2-b3f7-aa985f47b621"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="388" y="51" width="199" height="20" uuid="2a133da7-3a22-4de1-be59-a37822f4fe13"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Book Antiqua" size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Josué Salvador Valle Jiménez]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="51" width="337" height="20" forecolor="#FFFFFF" uuid="55f575d2-c642-4d1f-9589-945d3ac2cb3e"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Book Antiqua" size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[GRAN KINAL MALL, GRANDES MOMENTOS...]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="35" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

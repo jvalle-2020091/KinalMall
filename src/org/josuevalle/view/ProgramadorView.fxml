@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F4BC31;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuevalle.controller.ProgramadorController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="263.0" style="-fx-background-color: #C68144;">
+         <effect>
+            <InnerShadow color="#2c2727" height="83.27" radius="37.427499999999995" width="68.44" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <Button fx:id="btnProgramador" layoutX="52.0" layoutY="188.0" mnemonicParsing="false" onAction="#opciones" prefHeight="37.0" prefWidth="128.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Programador">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnKinal" layoutX="43.0" layoutY="251.0" mnemonicParsing="false" onAction="#opciones" prefHeight="31.0" prefWidth="146.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Administración ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="132.0" layoutY="55.0" prefHeight="43.0" prefWidth="128.0" text="Kinal  Mall">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="19.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="14.0" prefHeight="136.0" prefWidth="117.0" style="-fx-background-color: #704818; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <ImageView fitHeight="98.0" fitWidth="63.0" layoutX="31.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/programador.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblNombres" layoutX="273.0" layoutY="89.0" prefHeight="54.0" prefWidth="316.0">
+         <font>
+            <Font name="Gill Sans MT Ext Condensed Bold" size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblApellidos" layoutX="273.0" layoutY="152.0" prefHeight="54.0" prefWidth="310.0">
+         <font>
+            <Font name="Gill Sans MT Ext Condensed Bold" size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo" layoutX="273.0" layoutY="281.0" prefHeight="54.0" prefWidth="325.0">
+         <font>
+            <Font name="Gill Sans MT Ext Condensed Bold" size="45.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="51.0" layoutX="532.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/casita.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow height="96.62" radius="37.8" width="56.58" />
+   </effect>
+</AnchorPane>

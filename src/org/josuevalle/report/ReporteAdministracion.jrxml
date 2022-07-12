@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="884609de-047e-4d00-b380-899df7218a1b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="16" y="0" width="90" height="69" uuid="08270bba-2257-4fe2-bb82-44bf6dbd2e0d"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Documents\\NetBeansProjects\\KinalMall2020091\\src\\org\\josuevalle\\images\\logoKinal.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="118" y="21" width="128" height="48" uuid="94bec9f3-7639-4d20-9e0c-b9bee00bdfad"/>
+				<textElement>
+					<font fontName="Serif" size="22"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="92" y="0" width="446" height="27" backcolor="#FFB145" uuid="3dff204a-b6da-47a1-99bc-8da67e6a0a19"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="92" y="7" width="171" height="20" uuid="22ba8109-347f-4b3e-a888-35c10c8e7e2e"/>
+				<textElement>
+					<font fontName="Cooper Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Código de Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="7" width="90" height="17" uuid="5d669fcb-c2d5-45f0-9b4b-3d2f6ccec7d1"/>
+				<textElement>
+					<font fontName="Cooper Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="7" width="135" height="20" uuid="271e4675-bee6-48c8-b4f2-943200a54e9c"/>
+				<textElement>
+					<font fontName="Cooper Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="149" y="0" width="72" height="14" uuid="fe3f4528-e648-4991-814b-b12b74622e5e"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="4" width="100" height="20" uuid="fff7cf1e-fa2f-41a1-a051-c4461f55f5d4"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="4" width="100" height="20" uuid="dcd1f174-046b-4926-a737-d8c725f107b2"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="92" y="24" width="446" height="1" uuid="56be4ed0-1ba4-4e1c-9a8f-3ef5fc515f48"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

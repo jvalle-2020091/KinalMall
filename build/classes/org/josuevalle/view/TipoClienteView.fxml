@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="857.0" style="-fx-background-color: #F4BC31;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuevalle.controller.TipoClienteController">
+   <children>
+      <AnchorPane layoutX="371.0" layoutY="99.0" prefHeight="219.0" prefWidth="394.0" rotate="-128.7" style="-fx-background-color: #C68144; -fx-background-radius: 35 35 35 35;" />
+      <AnchorPane layoutX="228.0" layoutY="96.0" prefHeight="314.0" prefWidth="594.0" style="-fx-background-color: #A2A7A0;" />
+      <AnchorPane layoutY="-17.0" prefHeight="435.0" prefWidth="211.0" style="-fx-background-color: #C68144;">
+         <effect>
+            <InnerShadow choke="0.14" height="177.42" radius="90.555" width="186.8" />
+         </effect>
+         <children>
+            <AnchorPane layoutX="35.0" layoutY="12.0" prefHeight="128.0" prefWidth="136.0" style="-fx-background-color: #704818; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="87.0" layoutX="28.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tipoCliente.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="6.0" layoutY="14.0" prefHeight="30.0" prefWidth="124.0" text="Tipo Cliente " textFill="#fff6f6">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow height="0.0" radius="18.835" width="77.34" />
+               </effect>
+            </AnchorPane>
+            <VBox layoutX="35.0" layoutY="148.0" prefHeight="225.0" prefWidth="175.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: #C68144;" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="84.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="53.0" prefWidth="145.0" style="-fx-background-color: #C68144;" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="41.0" fitWidth="61.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="49.0" prefWidth="153.0" style="-fx-background-color: #C68144;" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="44.0" fitWidth="41.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="47.0" prefWidth="149.0" style="-fx-background-color: #C68144;" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="50.0" fitWidth="73.0" layoutX="129.0" layoutY="362.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/casita.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="225.0" layoutY="14.0" prefHeight="53.0" prefWidth="518.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="152.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="47.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="137.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="175.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Tipo Cliente">
+               <font>
+                  <Font name="Cambria Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="146.0" text="                Descripción" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Cambria Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoTipoCliente" editable="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #F1E08B; -fx-background-radius: 10 10 10 10;" GridPane.columnIndex="1" />
+            <TextField fx:id="txtDescripcion" editable="false" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #F1E08B; -fx-background-radius: 10 10 10 10;" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblTipoCliente" layoutX="236.0" layoutY="103.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="299.0" prefWidth="579.0" styleClass="table-row-cell" stylesheets="@../resource/KinalMallCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoCliente" prefWidth="145.0" text="Código Tipo Cliente" />
+          <TableColumn fx:id="colDescripcion" prefWidth="396.0" text="Descripción" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="63.0" fitWidth="58.0" layoutX="777.0" layoutY="14.0" onMouseClicked="#ventanaClientes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/cliente.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>

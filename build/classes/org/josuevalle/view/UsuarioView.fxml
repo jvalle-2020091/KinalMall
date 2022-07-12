@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="748.0" style="-fx-background-color: #F4BC31;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuevalle.controller.UsuarioController">
+   <children>
+      <AnchorPane layoutY="-19.0" prefHeight="407.0" prefWidth="204.0" style="-fx-background-color: #C68144;">
+         <effect>
+            <InnerShadow choke="0.17" height="194.46" radius="97.10249999999999" width="195.95" />
+         </effect>
+         <children>
+            <AnchorPane layoutX="45.0" layoutY="14.0" prefHeight="128.0" prefWidth="126.0" style="-fx-background-color: #704818; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="19.0" prefWidth="120.0" text="  Usuarios " textFill="#fff6f6">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="76.0" fitWidth="73.0" layoutX="27.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/usuario.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <InnerShadow height="9.14" radius="18.1525" width="65.47" />
+               </effect>
+            </AnchorPane>
+            <VBox layoutX="53.0" layoutY="155.0" prefHeight="217.0" prefWidth="162.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="151.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Nuevo">
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="38.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="36.0" prefWidth="151.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Cancelar">
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="38.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cancelar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane layoutX="384.0" layoutY="69.0" prefHeight="239.0" prefWidth="288.0" rotate="-128.7" style="-fx-background-color: #C68144; -fx-background-radius: 35 35 35 35;" />
+      <GridPane layoutX="274.0" layoutY="61.0" prefHeight="254.0" prefWidth="346.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="135.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="198.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtCodigoUsuario" editable="false" prefHeight="16.0" prefWidth="197.0" GridPane.columnIndex="1" />
+            <Label prefHeight="20.0" prefWidth="216.0" text="Código Usuario">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="216.0" text="Nombre Usuario" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="216.0" text="Apellido Usuario" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="7.0" prefWidth="230.0" text="Usuario" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="216.0" text="Contraseña" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombreUsuario" editable="false" prefHeight="16.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellidoUsuario" editable="false" prefHeight="16.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUsuario" editable="false" prefHeight="16.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtContrasena" editable="false" prefHeight="16.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
